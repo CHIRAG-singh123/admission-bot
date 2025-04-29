@@ -83,6 +83,7 @@ jupyter notebook
 ```
 
 Navigate to `chatbot_working.ipynb` and run all cells.
+For jupyter note book you can take help of this [video](https://youtu.be/8YGPfGDYAgI?si=UZFb_4p26i5hIo4R)
 
 ---
 
