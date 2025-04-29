@@ -1,182 +1,171 @@
-🎓 LJ University Admission ChatBot
-A Feature-Rich, AI-Powered ChatBot for Seamless University Admission Queries
+# 🎓 LJ University Admission ChatBot
 
-🌟 Project Overview
-Welcome to the LJ University Admission ChatBot, an advanced, user-friendly conversational AI designed to assist prospective students with university admission queries. Built with a modern Tkinter GUI and powered by cutting-edge NLP techniques, this chatbot provides accurate, context-aware responses to questions about eligibility, scholarships, deadlines, and more.
-✨ Key Features
+> *Empowering students with instant, accurate, and culturally connected admission guidance!*
 
-Natural Language Processing: Utilizes NLTK for tokenization, lemmatization, and TF-IDF for intelligent response matching.
-Fuzzy FAQ Matching: Leverages FuzzyWuzzy for robust FAQ handling, ensuring accurate answers even for imprecise queries.
-Multilingual Support: Integrates Googletrans for real-time translation of user inputs into English.
-Text Summarization: Employs TextBlob to deliver concise, meaningful responses.
-Speech Recognition (Optional): Supports speech-to-text input using SpeechRecognition for accessibility.
-Modern GUI: A sleek, responsive Tkinter interface with a dark theme, emoji support, and smooth user experience.
-Predefined FAQs: Instant answers to common queries like eligibility, admission process, and contact information.
-Cultural Greetings: Personalized responses with culturally relevant greetings like "Jay Shree Krishna" and "Namaste."
+![GitHub repo size](https://img.shields.io/github/repo-size/CHIRAG-singh123/lj-university-chatbot)
+![GitHub last commit](https://img.shields.io/github/last-commit/CHIRAG-singh123/lj-university-chatbot)
+![MIT License](https://img.shields.io/badge/license-MIT-green)
+![Python](https://img.shields.io/badge/Made%20with-Python-blue)
 
+---
 
-📚 How It Works
+## 🌟 Project Overview
 
-Input Processing:
+**LJ University Admission ChatBot** is a feature-rich, AI-powered assistant designed to provide seamless support for student admission queries. Built with a sleek **Tkinter GUI** and advanced **NLP capabilities**, it offers fast, context-aware responses about:
 
-User inputs (text or speech) are translated to English using Googletrans.
-Text is preprocessed (lowercased, punctuation removed, lemmatized) using NLTK.
+🎓 Eligibility • 🎁 Scholarships • 🕒 Deadlines • 📋 Admission Process
 
+---
 
-Response Generation:
+## ✨ Key Features
 
-Checks for greetings and responds with culturally relevant replies.
-Matches queries against predefined FAQs using FuzzyWuzzy (75%+ similarity).
-Uses TF-IDF and cosine similarity to find relevant responses from a corpus.
-Summarizes long responses with TextBlob for clarity.
+- 🤖 **Natural Language Processing**: Tokenization, Lemmatization, TF-IDF via **NLTK**.
+- 🧠 **Fuzzy FAQ Matching**: Smart matching using **FuzzyWuzzy** for user-friendly query handling.
+- 🌐 **Multilingual Support**: Real-time translations with **Googletrans**.
+- ✂️ **Text Summarization**: Summarize lengthy responses using **TextBlob**.
+- 🎙️ **Speech Recognition (Optional)**: Voice input through **SpeechRecognition**.
+- 💻 **Modern GUI**: Dark-themed, scrollable **Tkinter interface** with emoji and smooth UX.
+- ❓ **Predefined FAQs**: Instant answers to common university-related queries.
+- 🙏 **Cultural Greetings**: Replies with localized greetings like *Jay Shree Krishna* and *Namaste*.
 
+---
 
-User Interface:
+## 🧠 How It Works
 
-Displays conversations in a scrollable chat area with sender labels (e.g., "👤 You", "🤖 Bot").
-Supports commands like "bye" to exit and "thanks" for polite acknowledgments.
+### 🛠 Input Processing
+1. Translate input to English (`googletrans`)
+2. Preprocess text: lowercase, remove punctuation, lemmatize (`nltk`)
 
+### 🔁 Response Generation
+- Detect greetings for cultural replies.
+- Match FAQs via FuzzyWuzzy (≥75% similarity).
+- Use TF-IDF + Cosine Similarity for corpus matching.
+- Summarize lengthy responses using TextBlob.
 
-Extensibility:
+### 🖥 GUI Interface
+- Scrollable chat window with speaker labels (👤 You / 🤖 Bot)
+- Supports `/bye` to exit and `/thanks` to acknowledge
+- Voice input support (optional)
 
-Modular design allows easy integration of new features like sentiment analysis or advanced ML models.
+---
 
+## 📦 Installation
 
-
-
-🛠️ Installation
-Before running the code, make sure you have installed the required libraries. Below is a guide to set up the environment.
-1. Clone the Repository
+### 1. Clone the Repository
+```bash
 git clone https://github.com/your-username/lj-university-chatbot.git
 cd lj-university-chatbot
+```
 
-Alternatively, navigate to your existing BOTS folder containing admission_bot_large.txt and notebooks (e.g., chatbot_working.ipynb).
-2. Download Libraries
+> Or navigate to your BOTS folder with `admission_bot_large.txt` and `chatbot_working.ipynb`.
+
+### 2. Install Dependencies
+```bash
 pip install numpy pandas scikit-learn nltk textblob fuzzywuzzy googletrans==3.1.0a0 SpeechRecognition
+pip install --upgrade pip  # If needed
+```
 
-Ensure pip is updated if issues arise: pip install --upgrade pip.
-3. Download NLTK Data
+### 3. Download NLTK Data
+```python
 import nltk
 nltk.download('punkt')
 nltk.download('wordnet')
+```
 
-Run this in a Python shell, Jupyter cell, or save as setup_nltk.py and execute: python setup_nltk.py.
-4. Verify Corpus File
-Ensure admission_bot_large.txt is in your BOTS folder. Update the file path in chatbot_working.ipynb if needed (default: C:\\Users\\Asus\\Desktop\\SEM-8\\FDTL.DATA SCIENCE\\bots\\admission_bot_large.txt).
-5. Launch Jupyter Notebook
-Start Jupyter Notebook from the command line:
+> Save above as `setup_nltk.py` and run with `python setup_nltk.py`.
+
+### 4. Verify Corpus File
+Ensure `admission_bot_large.txt` is located in your BOTS folder. Update file path in the notebook if needed.
+
+### 5. Launch Jupyter Notebook
+```bash
 jupyter notebook
+```
 
-Open a browser window, navigate to the BOTS folder, and open chatbot_working.ipynb.
-6. Execute Notebook Cells
-In chatbot_working.ipynb, run all cells sequentially:
+Navigate to `chatbot_working.ipynb` and run all cells.
 
-Start with import cells.
-Run the corpus loading cell (verify no file path errors).
-Execute GUI initialization and main loop cells.
+---
 
-7. Interact with the ChatBot
-Once the Tkinter GUI launches, type queries in the input field or press "Send" to interact. Use "bye" to exit.
-For running the code you can take help of [youtube video](https://youtu.be/8YGPfGDYAgI?si=UZFb_4p26i5hIo4R)
+## 🚀 Usage Guide
 
-🚀 Usage
+1. Launch the notebook and Tkinter GUI will open.
+2. Type your query in the input box or click **Send**.
+3. For voice input (optional), configure microphone access.
+4. Ask about admissions, deadlines, etc.
+5. Exit with `bye`, thank with `thanks`.
 
-Launch the application via Jupyter Notebook to see the Tkinter GUI with a welcome message.
-Type your query in the input field or press "Send" (or hit Enter).
-For speech input (if enabled), configure SpeechRecognition and use the microphone option.
-Ask about admissions, scholarships, deadlines, or greet the bot with "Hi" or "Hello."
-Type "bye" to exit or "thanks" for a polite response.
+### ✅ Example Queries
+- “What are the eligibility criteria?”
+- “Tell me about scholarships.”
+- “Namaste, how do I apply?”
+- “When is the application deadline?”
 
-Example Queries
+---
 
-"What are the eligibility criteria?"
-"Tell me about scholarships."
-"When is the application deadline?"
-"Namaste, how do I apply?"
+## 📊 Technologies Used
 
+| Library           | Purpose                                               |
+|------------------|-------------------------------------------------------|
+| `Tkinter`        | GUI development (dark theme, scrollable chat)         |
+| `NLTK`           | Text preprocessing: tokenization, lemmatization       |
+| `Scikit-learn`   | TF-IDF + Cosine Similarity                            |
+| `TextBlob`       | Summarization, sentiment (optional)                   |
+| `FuzzyWuzzy`     | FAQ matching with similarity scoring                  |
+| `Googletrans`    | Multilingual input translation                        |
+| `SpeechRecognition` | Voice-to-text (optional)                           |
+| `NumPy`          | Backend array operations for similarity checks        |
 
-📊 Technologies Used
+---
 
+## 🎯 Results
 
+- 🔍 **Accuracy**: >75% FAQ match with relevant responses
+- 💬 **User Experience**: Intuitive interface + culturally tuned replies
+- 📈 **Scalability**: Modular code supports advanced upgrades
+- 🌎 **Multilingual**: Real-time translation for diverse users
 
-Library
-Purpose
+---
 
+## 🔮 Future Enhancements
 
+- 🧠 **Sentiment Analysis**: Dynamic response tuning with VADER/TextBlob
+- 💾 **Database Integration**: Replace static corpus with real-time DB
+- 🔊 **Voice Output**: Enable text-to-speech for spoken replies
+- 🌐 **Web Version**: Flask/Django deployment for cross-platform use
+- 🤖 **Advanced NLP**: Integrate BERT or similar transformer models
 
-Tkinter
-Modern GUI with scrollable chat and interactive buttons
+---
 
+## 🤝 Contributing
 
-NLTK
-Text tokenization, lemmatization, and preprocessing
+We ❤️ contributions!
 
+```bash
+# Steps to contribute
+1. Fork the repo
+2. Create a feature branch: git checkout -b feature/YourFeature
+3. Commit your changes: git commit -m "Add YourFeature"
+4. Push to GitHub: git push origin feature/YourFeature
+5. Open a Pull Request 🚀
+```
 
-Scikit-learn
-TF-IDF vectorization and cosine similarity for response matching
+> For major changes, kindly open an issue first.
 
+---
 
-TextBlob
-Text summarization and sentiment analysis (optional)
+## 📜 License
 
+This project is licensed under the **MIT License**. See [LICENSE](LICENSE) for details.
 
-FuzzyWuzzy
-Fuzzy matching for robust FAQ handling
+---
 
+## 👨‍💻 Author
 
-Googletrans
-Real-time translation for multilingual support
+**Chirag Singh**
 
+- 🔗 [LinkedIn](https://www.linkedin.com/in/thechiragsingh/)
+- 💻 [GitHub](https://github.com/CHIRAG-singh123)
 
-SpeechRecognition
-Speech-to-text input (optional)
+---
 
-
-NumPy
-Efficient array operations for similarity calculations
-
-
-
-🎯 Results
-
-Accuracy: Achieves high response relevance with TF-IDF and fuzzy matching (>75% FAQ match threshold).
-User Experience: Smooth, intuitive GUI with culturally tailored responses.
-Scalability: Easily extensible for additional features like sentiment analysis or database integration.
-Multilingual: Handles queries in multiple languages via translation.
-
-
-🔮 Future Enhancements
-
-Sentiment Analysis: Integrate TextBlob or VADER for analyzing user sentiment and tailoring responses.
-Database Integration: Replace corpus file with a database for dynamic updates.
-Voice Output: Add text-to-speech for audio responses.
-Web Deployment: Convert to a web app using Flask or Django for broader accessibility.
-Advanced NLP: Incorporate transformers (e.g., BERT) for improved context understanding.
-
-
-🤝 Contributing
-We welcome contributions to make the LJ University Admission ChatBot even better! To contribute:
-
-Fork the repository.
-Create a feature branch (git checkout -b feature/YourFeature).
-Commit changes (git commit -m "Add YourFeature").
-Push to the branch (git push origin feature/YourFeature).
-Open a pull request.
-
-Please open an issue first for major changes or new features.
-
-📜 License
-This project is licensed under the MIT License.
-
-
-👨‍💻 Author
-
-CHIRAG SINGH
-- LinkedIn: [Linkedin](https://www.linkedin.com/in/thechiragsingh/)
-- GitHub: [Github](https://github.com/CHIRAG-singh123)
-
-
-
-"Empowering students with instant, accurate, and culturally connected admission guidance!"
-
-
+> *“Built to serve students with speed, clarity, and a cultural touch.”*
