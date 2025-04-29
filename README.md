@@ -44,68 +44,40 @@ Modular design allows easy integration of new features like sentiment analysis o
 
 
 
-🛠️ How to Run the Code
-Follow these 7 detailed steps to set up and run the LJ University Admission ChatBot using your Jupyter Notebook setup.
-Step 1: Verify System Requirements
-
-Ensure Python 3.8 or higher is installed. Check with:python --version
-
-
-Confirm pip is installed and updated:pip install --upgrade pip
-
-
-Ensure Jupyter Notebook is installed (if not, install with pip install notebook).
-
-Step 2: Clone or Locate the Repository
-
-If using Git, clone the project:git clone https://github.com/your-username/lj-university-chatbot.git
+🛠️ Installation
+Before running the code, make sure you have installed the required libraries. Below is a guide to set up the environment.
+1. Clone the Repository
+git clone https://github.com/your-username/lj-university-chatbot.git
 cd lj-university-chatbot
 
-
 Alternatively, navigate to your existing BOTS folder containing admission_bot_large.txt and notebooks (e.g., chatbot_working.ipynb).
+2. Download Libraries
+pip install numpy pandas scikit-learn nltk textblob fuzzywuzzy googletrans==3.1.0a0 SpeechRecognition
 
-Step 3: Install Required Libraries
-
-Install all necessary Python libraries globally (no virtual environment needed):pip install numpy pandas scikit-learn nltk textblob fuzzywuzzy googletrans==3.1.0a0 SpeechRecognition
-
-
-Note: Use googletrans==3.1.0a0 to avoid compatibility issues with newer versions.
-
-Step 4: Download NLTK Data
-
-The chatbot requires NLTK datasets. Download them by running:import nltk
+Ensure pip is updated if issues arise: pip install --upgrade pip.
+3. Download NLTK Data
+import nltk
 nltk.download('punkt')
 nltk.download('wordnet')
 
+Run this in a Python shell, Jupyter cell, or save as setup_nltk.py and execute: python setup_nltk.py.
+4. Verify Corpus File
+Ensure admission_bot_large.txt is in your BOTS folder. Update the file path in chatbot_working.ipynb if needed (default: C:\\Users\\Asus\\Desktop\\SEM-8\\FDTL.DATA SCIENCE\\bots\\admission_bot_large.txt).
+5. Launch Jupyter Notebook
+Start Jupyter Notebook from the command line:
+jupyter notebook
 
-Execute this in a Python shell, Jupyter cell, or save as setup_nltk.py and run:python setup_nltk.py
+Open a browser window, navigate to the BOTS folder, and open chatbot_working.ipynb.
+6. Execute Notebook Cells
+In chatbot_working.ipynb, run all cells sequentially:
 
+Start with import cells.
+Run the corpus loading cell (verify no file path errors).
+Execute GUI initialization and main loop cells.
 
-
-Step 5: Verify Corpus File
-
-Ensure admission_bot_large.txt is in your BOTS folder (as shown in your screenshot).
-Open chatbot_working.ipynb and verify the file path matches your setup (default: C:\\Users\\Asus\\Desktop\\SEM-8\\FDTL.DATA SCIENCE\\bots\\admission_bot_large.txt).
-If the path differs, update it in the notebook cell loading the file.
-
-Step 6: Launch Jupyter Notebook
-
-Start Jupyter Notebook from the command line:jupyter notebook
-
-
-This opens a browser window. Navigate to the BOTS folder and open chatbot_working.ipynb.
-
-Step 7: Run the ChatBot
-
-In chatbot_working.ipynb, execute all cells sequentially:
-Run the import cells first.
-Run the corpus loading cell (ensure no errors with file path).
-Execute the GUI initialization and main loop cells.
-
-
-Once complete, the Tkinter GUI will launch. Type queries in the input field or press "Send" to interact.
-To stop, close the GUI window or use the "bye" command.
-
+7. Interact with the ChatBot
+Once the Tkinter GUI launches, type queries in the input field or press "Send" to interact. Use "bye" to exit.
+For running the code you can take help of [youtube video](https://youtu.be/8YGPfGDYAgI?si=UZFb_4p26i5hIo4R)
 
 🚀 Usage
 
@@ -195,6 +167,7 @@ Please open an issue first for major changes or new features.
 
 📜 License
 This project is licensed under the MIT License.
+
 
 👨‍💻 Author
 
