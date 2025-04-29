@@ -162,7 +162,7 @@ This project is licensed under the **MIT License**. See [LICENSE](LICENSE) for d
 
 ## 👨‍💻 Author
 
-**Chirag Singh**
+**CHIRAG SINGH**
 
 - 🔗 [LinkedIn](https://www.linkedin.com/in/thechiragsingh/)
 - 💻 [GitHub](https://github.com/CHIRAG-singh123)
